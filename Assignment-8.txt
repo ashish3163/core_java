@@ -1,0 +1,204 @@
+ 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------             
+
+que 52)
+package pkg_5;
+
+import java.util.Scanner;
+
+public class CountWords {
+
+	        public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter the string input.");
+		String input = sc.nextLine();
+		
+		int count = 0;
+		for(int i=0; i<input.length(); i++) 
+                {	
+		count++;
+		}
+		
+		System.out.print("The count of words in given string : "+count);
+}
+
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+que 53)
+
+package pkg_52;
+
+import java.util.Scanner;
+
+public class FirstLetterUpper {
+
+	        public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter the string input : ");
+		String input = sc.nextLine();
+		
+		String arr[] = input.split(" ");
+		
+		String res = "";
+
+		for(String trav : arr) 
+                {			
+                        String first = trav.substring(0,1);
+			String rest = trav.substring(1);
+			result = res+first.toUpperCase()+rest.toLowerCase()+" ";
+	        }
+		
+		System.out.println(result);
+}
+
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------
+que 54)
+
+package pkg_52;
+
+import java.util.Scanner;
+
+public class IntSum {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		String inp = sc.nextLine();
+		String arr[] = inp.split(" ");
+		
+		int sum = 0;
+		
+		for(int i=0; i<arr.length; i++) 
+                {  sum = sum + Integer.parseInt(arr[i]); }
+				
+		System.out.println("Sum of given number : "+sum);
+}
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+que 55)
+
+package pkg_52;
+
+import java.util.Scanner;
+
+public class ReverseString {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter the string for reverse it.");
+		String inp = sc.nextLine();
+				
+		String rev = "";
+		for(int i=input.length()-1; i>=0; i--) 
+                {    rev = rev + input.charAt(i);    }          						
+                
+		System.out.println(rev);
+}
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+que 56) 
+
+package pkg_52;
+
+import java.util.Scanner;
+
+public class ReverseWord {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter the string input : ");
+		String inp = sc.nextLine();	
+		
+		String arr[] = inp.split(" ");
+		
+		String res = "";
+		
+		for(String trav : arr) 
+                {
+			String word = "";
+			for(int i=trav.length()-1; i>=0; i--) 
+                        {
+			  word = word + trav.charAt(i);
+			}
+			res = res + word + " ";
+		}
+		
+		System.out.println(res);
+}
+
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+que 57)
+
+package pkg_52;
+
+import java.util.Scanner;
+
+public class StringVowels {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter the name : ");
+		String str = sc.nextLine();
+		
+		int count = 0;
+		for(int i=0; i<str.length(); i++)
+                {			
+			if(str.charAt(i)=='A' || str.charAt(i)=='E' || str.charAt(i)=='I' || str.charAt(i)=='O' || str.charAt(i)=='U') 
+                        {	
+				count++;
+			}
+			
+			if(str.charAt(i)=='a' || str.charAt(i)=='e' || str.charAt(i)=='i' || str.charAt(i)=='o' || str.charAt(i)=='u') 
+                        {
+				count++;
+			}
+		}
+		
+		System.out.println("The count of vowels in given string is : "+count);
+		
+		sc.close();
+
+}
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------
+que 58)
+
+package pkg_52;
+
+import java.util.Scanner;
+
+public class WeekDays {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		String weekdays[] = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
+		
+		System.out.println("Enter the number for searching day.");
+		int input = sc.nextInt();
+		
+		try { System.out.print("The day with respect to your input : "+weekdays[input-1]); }
+					
+		catch(ArrayIndexOutOfBoundsException exp) 
+                {  System.out.println("Please provide the correct input between 1 to 7."); }
+			
+}
+
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
